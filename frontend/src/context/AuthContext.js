@@ -16,6 +16,9 @@ const AuthProvider = ({children}) => {
     const loginUser = async (obj) => {
         const response = await axios.post(`${apiUrl}/api/auth/login`, obj);
         console.log("loginUser response: ", response)
+        if (response.date) {
+            localStorage.setItem("jwtposts", JSON.stringify(response.data))
+        }
     }
 
     const googleLogin = async (obj) => {

@@ -1,7 +1,6 @@
-import logo from './logo.svg';
+
 import './App.css';
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import { useContext, useReducer } from 'react';
+import { useContext } from 'react';
 import { AuthContext } from './context/AuthContext';
 import GoogleButton from './components/GoogleButton';
 
